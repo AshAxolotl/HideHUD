@@ -58,6 +58,7 @@ func ingame():
 	gui.get_node("bait").connect("visibility_changed", self, "bait_changed")
 	gui.get_node("bait").connect("_update", self, "bait_changed")
 	gui.get_node("interact_notif").connect("visibility_changed", self, "interact_notif_visibility_changed")
+	gui.get_node("freecamwarning").connect("visibility_changed", self, "freecamwarning_visibility_changed")
 	get_node("/root/playerhud").connect("child_entered_tree", self, "new_hud_element")
 
 func player_added(player):
@@ -77,7 +78,6 @@ func hide_hud():
 	gui.get_node("HBoxContainer").visible = !settings["Top Right Buttons"]
 	gui.get_node("hotbar").visible = !settings["HotBar"]
 	gui.get_node("static_effects").visible = !settings["Static Effects"]
-	gui.get_node("freecamwarning").visible = !settings["Freecam Warning"]
 	gui.get_node("item_help").visible = !settings["Item Help"]
 	gui.get_node("show_chat").visible = !settings["Game Chat"]
 	gui.get_node("gamechat/Panel").visible = !settings["Game Chat"]
@@ -112,7 +112,12 @@ func interact_notif_visibility_changed():
 	var interact_notif = gui.get_node("interact_notif")
 	if interact_notif.visible == true:
 		interact_notif.visible = !settings["Interaction Notification"]
-		
+
+func freecamwarning_visibility_changed():
+	var freecamwarning = gui.get_node("freecamwarning")
+	if freecamwarning.visible == true:
+		freecamwarning.visible = !settings["Freecam Warning"]
+
 func new_hud_element(node):
 	if node.name == "fishing3":
 		node.visible = !settings["Fishing Minigame"]

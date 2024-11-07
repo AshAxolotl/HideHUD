@@ -1,9 +1,9 @@
 
 id = "AshAxolotl.HideHUD"
-name = "Hide HUD"
+name = "HideHUD"
 description = "Hide HUD using a config"
-version = "1.0.0"
-homepage = "https://github.com/NotNite/WebfishingSampleMod"
+version = "1.0.1"
+homepage = "https://github.com/AshAxolotl/HideHUD"
 author = "AshAxolotl"
 
 icon = "icon.png"

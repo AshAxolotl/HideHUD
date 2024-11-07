@@ -1,0 +1,23 @@
+
+id = "AshAxolotl.HideHUD"
+name = "Hide HUD"
+description = "Hide HUD using a config"
+version = "1.0.0"
+homepage = "https://github.com/NotNite/WebfishingSampleMod"
+author = "AshAxolotl"
+
+icon = "icon.png"
+readme = "README.md"
+
+[project]
+godot = "./project/project.godot"
+
+[[dependencies]]
+thunderstore_version = "NotNet-GDWeave-2.0.13"
+
+[[dependencies]]
+id = "TackleBox"
+thunderstore_version = "PuppyGirl-TackleBox-0.4.1"
+
+[[dependencies]]
+id = "BlueberryWolfi.APIs"

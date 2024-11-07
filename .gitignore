@@ -1,0 +1,14 @@
+.idea/
+.vs/
+*.user
+/local
+
+bin/
+obj/
+*.pck
+
+manifestation/
+
+.import/
+export_presets.cfg
+*.import

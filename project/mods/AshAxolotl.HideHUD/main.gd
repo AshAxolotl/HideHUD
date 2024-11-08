@@ -21,6 +21,7 @@ var DEFAULT_SETTINGS = {
 	"Other Name": false,
 	"Other Title": false,
 	"Other Speech Bubble": false,
+	"Saving Icon": false
 }
 
 const MOD_ID := "AshAxolotl.HideHUD"
@@ -34,10 +35,11 @@ var gui
 func _ready():
 	PlayerAPI.connect("_ingame", self, "ingame")
 	PlayerAPI.connect("_player_added", self, "player_added")
+	get_node("/root/UserSave").connect("child_entered_tree", self, "usersave_child_entered_tree")
 	
 	# Load Tackle Box / Settings
 	if TackleBox == null:
-		push_error("TackbleBox was not found using default settings. pls install tacklebox to change settings!")
+		push_error("HideHUD: TackbleBox was not found using default settings. pls install tacklebox to change settings!")
 		settings = DEFAULT_SETTINGS
 	else:
 		TackleBox.connect("mod_config_updated", self, "mod_config_updated")
@@ -70,7 +72,7 @@ func player_added(player):
 func hide_hud():
 	gui = get_node_or_null("/root/playerhud/main/in_game")
 	if gui == null:
-		push_warning("gui was not found! are you in game?")
+		push_warning("HideHUD: Gui was not found! are you in game?")
 		return
 	get_node("/root/playerhud/notif_popup").visible = !settings["Notification Popup"]
 	get_node("/root/playerhud/badge_popup").visible = !settings["Badge Popup"]
@@ -121,3 +123,7 @@ func freecamwarning_visibility_changed():
 func new_hud_element(node):
 	if node.name == "fishing3":
 		node.visible = !settings["Fishing Minigame"]
+		
+func usersave_child_entered_tree(node):
+	if "anim" in node.name:
+		node.visible = !settings["Saving Icon"]

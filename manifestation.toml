@@ -2,7 +2,7 @@
 id = "AshAxolotl.HideHUD"
 name = "HideHUD"
 description = "Hide HUD using a config"
-version = "1.0.2"
+version = "1.0.3"
 homepage = "https://github.com/AshAxolotl/HideHUD"
 author = "AshAxolotl"
 
@@ -21,3 +21,4 @@ thunderstore_version = "PuppyGirl-TackleBox-0.4.1"
 
 [[dependencies]]
 id = "BlueberryWolfi.APIs"
+thunderstore_version = "BlueberryWolfi-BlueberryWolfiAPIs-1.0.2"

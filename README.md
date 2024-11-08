@@ -3,4 +3,4 @@ It hides nothing by default change the settings in the mods menu
 
 Requires: 
 [TackleBox](https://thunderstore.io/c/webfishing/p/PuppyGirl/TackleBox/)
-[BlueberryWolf's API](https://github.com/BlueberryWolf/APIs)
+[BlueberryWolf's API](https://thunderstore.io/c/webfishing/p/BlueberryWolfi/BlueberryWolfiAPIs/)

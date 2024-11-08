@@ -2,7 +2,7 @@
 id = "AshAxolotl.HideHUD"
 name = "HideHUD"
 description = "Hide HUD using a config"
-version = "1.0.3"
+version = "1.0.4"
 homepage = "https://github.com/AshAxolotl/HideHUD"
 author = "AshAxolotl"
 

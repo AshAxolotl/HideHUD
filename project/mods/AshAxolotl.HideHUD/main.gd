@@ -84,7 +84,7 @@ func hide_hud():
 	gui.get_node("show_chat").visible = !settings["Game Chat"]
 	gui.get_node("gamechat/Panel").visible = !settings["Game Chat"]
 	gui.get_node("gamechat/Panel2").visible = !settings["Game Chat"]
-	gui.get_node("gamechat/Button").visible = !settings["Game Chat"]
+	#gui.get_node("gamechat/Button").visible = !settings["Game Chat"] # this is never visible in the vanilla game
 	gui.get_node("gamechat/RichTextLabel").visible = !settings["Game Chat"]
 	if settings["Game Chat Input"]: # sets the scale to 0 instead of visible to make sure you can still type
 		gui.get_node("gamechat/LineEdit").rect_scale = Vector2(0, 0)
